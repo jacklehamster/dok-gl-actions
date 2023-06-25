@@ -13,7 +13,8 @@
    },
    "scripts": {
       "build": "microbundle-crl --no-compress --format modern,cjs && npm run schema",
-      "schema": "typescript-json-schema -o schema.json src/index.ts GlDokConfig"
+      "schema": "typescript-json-schema -o schema.json src/index.ts GlDokConfig",
+      "test": "echo No test."
    },
    "peerDependencies": {
       "react": "^18.0.10"
