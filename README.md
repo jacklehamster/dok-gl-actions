@@ -1,4 +1,4 @@
-# dok-lib
+# dok-gl-actions
 
 > Made with create-react-library
 
