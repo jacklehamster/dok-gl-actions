@@ -236,6 +236,9 @@
                         }
                     ]
                 },
+                "defaultParameters": {
+                    "$ref": "#/definitions/Record<string,Resolution>"
+                },
                 "delay": {
                     "$ref": "#/definitions/NumberResolution<number>"
                 },
@@ -635,9 +638,6 @@
                         ]
                     },
                     "type": "array"
-                },
-                "defaultParameters": {
-                    "$ref": "#/definitions/Record<string,Resolution>"
                 },
                 "name": {
                     "type": "string"
@@ -1102,6 +1102,9 @@
         },
         "ScriptAction": {
             "properties": {
+                "defaultParameters": {
+                    "$ref": "#/definitions/Record<string,Resolution>"
+                },
                 "parameters": {
                     "$ref": "#/definitions/Record<string,Resolution>"
                 },
