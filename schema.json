@@ -419,7 +419,28 @@
                     ]
                 },
                 "loop": {
-                    "$ref": "#/definitions/NumberResolution<number>"
+                    "anyOf": [
+                        {
+                            "properties": {
+                                "formula": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "items": {
+                                "$ref": "#/definitions/NumberResolution<number>"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": [
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
                 },
                 "parameters": {
                     "$ref": "#/definitions/Record<string,Resolution>"
@@ -599,6 +620,9 @@
                         }
                     },
                     "type": "object"
+                },
+                "whileCondition": {
+                    "$ref": "#/definitions/BooleanResolution"
                 }
             },
             "type": "object"
@@ -838,7 +862,31 @@
                     ]
                 },
                 "loop": {
-                    "$ref": "#/definitions/NumberResolution<number>"
+                    "anyOf": [
+                        {
+                            "properties": {
+                                "formula": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "items": {
+                                "$ref": "#/definitions/NumberResolution<number>"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": [
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "whileCondition": {
+                    "$ref": "#/definitions/BooleanResolution"
                 }
             },
             "type": "object"
