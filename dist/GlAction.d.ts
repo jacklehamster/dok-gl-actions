@@ -2,7 +2,7 @@ import { BooleanResolution, DokAction, NumberResolution, StringResolution, Typed
 import { GlType, GlUsage } from "./types";
 import { ImageId, TextureId, Url } from "./ImageId";
 export declare type LocationName = string;
-export declare type LocationResolution = LocationName | StringResolution | [LocationName | StringResolution, 0 | 1 | 2 | 3];
+export declare type LocationResolution = LocationName | StringResolution | [StringResolution<LocationName>, NumberResolution<0 | 1 | 2 | 3>];
 export interface GlAction extends DokAction {
     program?: {
         id: StringResolution;
