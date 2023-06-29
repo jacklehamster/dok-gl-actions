@@ -3,7 +3,7 @@ import { GlType, GlUsage } from "./types";
 import { ImageId, TextureId, Url } from "./ImageId";
 
 export type LocationName = string;
-export type LocationResolution = LocationName | StringResolution | [StringResolution<LocationName>, NumberResolution<0|1|2|3>];
+export type LocationResolution = LocationName | StringResolution | [StringResolution<LocationName>, NumberResolution];
 
 export interface GlAction extends DokAction {
     program?: {
