@@ -26,7 +26,7 @@ export interface GlAction extends DokAction {
     };
     updateAttributeBuffer?: StringResolution<LocationName>;
     bindVertexArray?: boolean;
-    bindBuffer: StringResolution<LocationName>;
+    bindBuffer?: StringResolution<LocationName>;
     drawArrays?: {
         vertexFirst?: NumberResolution;
         vertexCount?: NumberResolution;
