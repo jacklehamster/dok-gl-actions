@@ -12,7 +12,7 @@ export interface GlAction extends DokAction {
       fragmentShader: StringResolution;  
     };
     bufferData?: {
-      location?: StringResolution<LocationName>;
+      location: StringResolution<LocationName>;
       buffer?: TypedArrayResolution;
       length?: NumberResolution;
       usage?: StringResolution<GlUsage>;
@@ -28,13 +28,14 @@ export interface GlAction extends DokAction {
     };
     updateAttributeBuffer?: StringResolution<LocationName>;
     bindVertexArray?: boolean;
+    bindBuffer: StringResolution<LocationName>;
     drawArrays?: {
       vertexFirst?: NumberResolution;
       vertexCount?: NumberResolution;
       instanceCount?: NumberResolution;
     };
     vertexAttribPointer?: {
-      location?: LocationResolution;
+      location: LocationResolution;
       size?: NumberResolution<1|2|3|4>;
       glType?: GlType;
       normalized?: BooleanResolution;

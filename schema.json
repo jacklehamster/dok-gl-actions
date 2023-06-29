@@ -139,6 +139,9 @@
                 "activateProgram": {
                     "$ref": "#/definitions/StringResolution<string>"
                 },
+                "bindBuffer": {
+                    "$ref": "#/definitions/StringResolution<string>"
+                },
                 "bindVertexArray": {
                     "type": "boolean"
                 },
