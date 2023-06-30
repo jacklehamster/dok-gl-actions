@@ -539,6 +539,45 @@
                     },
                     "type": "object"
                 },
+                "transformSpriteMatrix": {
+                    "properties": {
+                        "height": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "index": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "rotation": {
+                            "items": [
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                },
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                },
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                }
+                            ],
+                            "maxItems": 3,
+                            "minItems": 3,
+                            "type": "array"
+                        },
+                        "width": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "x": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "y": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "z": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        }
+                    },
+                    "type": "object"
+                },
                 "uniform": {
                     "properties": {
                         "float": {

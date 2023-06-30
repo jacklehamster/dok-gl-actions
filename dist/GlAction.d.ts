@@ -68,4 +68,13 @@ export interface GlAction extends DokAction {
         imageId: StringResolution<ImageId>;
         onLoad?: GlAction[];
     };
+    transformSpriteMatrix?: {
+        index: NumberResolution;
+        x: NumberResolution;
+        y: NumberResolution;
+        z: NumberResolution;
+        rotation: [NumberResolution, NumberResolution, NumberResolution];
+        width: NumberResolution;
+        height: NumberResolution;
+    };
 }
