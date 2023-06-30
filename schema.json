@@ -539,6 +539,9 @@
                     },
                     "type": "object"
                 },
+                "sets": {
+                    "$ref": "#/definitions/Record<string,Resolution>"
+                },
                 "spriteMatrixTransform": {
                     "properties": {
                         "index": {
@@ -1254,6 +1257,9 @@
                         }
                     },
                     "type": "object"
+                },
+                "sets": {
+                    "$ref": "#/definitions/Record<string,Resolution>"
                 }
             },
             "type": "object"
