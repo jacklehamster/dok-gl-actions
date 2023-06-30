@@ -539,11 +539,8 @@
                     },
                     "type": "object"
                 },
-                "transformSpriteMatrix": {
+                "spriteMatrixTransform": {
                     "properties": {
-                        "height": {
-                            "$ref": "#/definitions/NumberResolution<number>"
-                        },
                         "index": {
                             "$ref": "#/definitions/NumberResolution<number>"
                         },
@@ -563,17 +560,37 @@
                             "minItems": 3,
                             "type": "array"
                         },
-                        "width": {
-                            "$ref": "#/definitions/NumberResolution<number>"
+                        "scale": {
+                            "items": [
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                },
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                },
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                }
+                            ],
+                            "maxItems": 3,
+                            "minItems": 3,
+                            "type": "array"
                         },
-                        "x": {
-                            "$ref": "#/definitions/NumberResolution<number>"
-                        },
-                        "y": {
-                            "$ref": "#/definitions/NumberResolution<number>"
-                        },
-                        "z": {
-                            "$ref": "#/definitions/NumberResolution<number>"
+                        "translate": {
+                            "items": [
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                },
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                },
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                }
+                            ],
+                            "maxItems": 3,
+                            "minItems": 3,
+                            "type": "array"
                         }
                     },
                     "type": "object"
