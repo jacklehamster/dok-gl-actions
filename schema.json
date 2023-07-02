@@ -259,6 +259,9 @@
                     },
                     "type": "object"
                 },
+                "executeScript": {
+                    "type": "string"
+                },
                 "hooks": {
                     "items": {
                         "$ref": "#/definitions/StringResolution<string>"
@@ -497,15 +500,6 @@
                         }
                     },
                     "type": "object"
-                },
-                "script": {
-                    "type": "string"
-                },
-                "scriptTags": {
-                    "items": {
-                        "$ref": "#/definitions/Tag"
-                    },
-                    "type": "array"
                 },
                 "set": {
                     "properties": {
@@ -1209,17 +1203,11 @@
                 "defaultParameters": {
                     "$ref": "#/definitions/Record<string,Resolution>"
                 },
-                "parameters": {
-                    "$ref": "#/definitions/Record<string,Resolution>"
-                },
-                "script": {
+                "executeScript": {
                     "type": "string"
                 },
-                "scriptTags": {
-                    "items": {
-                        "$ref": "#/definitions/Tag"
-                    },
-                    "type": "array"
+                "parameters": {
+                    "$ref": "#/definitions/Record<string,Resolution>"
                 }
             },
             "type": "object"
