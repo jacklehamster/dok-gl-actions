@@ -239,7 +239,7 @@
                         }
                     ]
                 },
-                "defaultParameters": {
+                "defaultValues": {
                     "$ref": "#/definitions/Record<string,Resolution>"
                 },
                 "delay": {
@@ -1200,9 +1200,6 @@
         },
         "ScriptAction": {
             "properties": {
-                "defaultParameters": {
-                    "$ref": "#/definitions/Record<string,Resolution>"
-                },
                 "executeScript": {
                     "type": "string"
                 },
@@ -1214,6 +1211,9 @@
         },
         "SetAction": {
             "properties": {
+                "defaultValues": {
+                    "$ref": "#/definitions/Record<string,Resolution>"
+                },
                 "set": {
                     "properties": {
                         "access": {
