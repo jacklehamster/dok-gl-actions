@@ -82,6 +82,27 @@
             },
             "type": "object"
         },
+        "ArrayResolution": {
+            "anyOf": [
+                {
+                    "properties": {
+                        "formula": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                {
+                    "items": {
+                        "$ref": "#/definitions/Resolution"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
         "BooleanResolution": {
             "anyOf": [
                 {
@@ -444,6 +465,9 @@
                             ]
                         }
                     ]
+                },
+                "loopEach": {
+                    "$ref": "#/definitions/ArrayResolution"
                 },
                 "parameters": {
                     "$ref": "#/definitions/Record<string,Resolution>"
@@ -937,6 +961,9 @@
                             ]
                         }
                     ]
+                },
+                "loopEach": {
+                    "$ref": "#/definitions/ArrayResolution"
                 },
                 "whileCondition": {
                     "$ref": "#/definitions/BooleanResolution"
