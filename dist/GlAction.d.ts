@@ -74,4 +74,5 @@ export interface GlAction extends DokAction {
         rotation: [NumberResolution, NumberResolution, NumberResolution];
         scale: [NumberResolution, NumberResolution, NumberResolution];
     };
+    projectionMatrixTransform?: {};
 }

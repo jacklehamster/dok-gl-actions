@@ -505,6 +505,10 @@
                     },
                     "type": "object"
                 },
+                "projectionMatrixTransform": {
+                    "properties": {},
+                    "type": "object"
+                },
                 "reference": {
                     "$ref": "#/definitions/StringResolution<string>"
                 },
