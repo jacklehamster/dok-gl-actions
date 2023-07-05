@@ -189,6 +189,14 @@
                     },
                     "type": "object"
                 },
+                "bufferSubDataMatrix": {
+                    "properties": {
+                        "index": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        }
+                    },
+                    "type": "object"
+                },
                 "clear": {
                     "anyOf": [
                         {
@@ -265,6 +273,9 @@
                         }
                     },
                     "type": "object"
+                },
+                "initMatrix": {
+                    "type": "boolean"
                 },
                 "loadTexture": {
                     "properties": {
@@ -401,6 +412,29 @@
                 "loopEach": {
                     "$ref": "#/definitions/ArrayResolution"
                 },
+                "orthogonalProjectionMatrixTransform": {
+                    "properties": {
+                        "aspect": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "viewportBottom": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "viewportLeft": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "viewportRight": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "viewportTop": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "zFar": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        }
+                    },
+                    "type": "object"
+                },
                 "parameters": {
                     "$ref": "#/definitions/Record<string,Resolution>"
                 },
@@ -410,6 +444,23 @@
                         "number",
                         "boolean"
                     ]
+                },
+                "perspectiveProjectionMatrixTransform": {
+                    "properties": {
+                        "aspect": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "viewAngle": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "zFar": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "zNear": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        }
+                    },
+                    "type": "object"
                 },
                 "program": {
                     "properties": {
@@ -423,10 +474,6 @@
                             "type": "string"
                         }
                     },
-                    "type": "object"
-                },
-                "projectionMatrixTransform": {
-                    "properties": {},
                     "type": "object"
                 },
                 "reference": {
@@ -471,9 +518,6 @@
                 },
                 "spriteMatrixTransform": {
                     "properties": {
-                        "index": {
-                            "$ref": "#/definitions/NumberResolution<number>"
-                        },
                         "rotation": {
                             "items": [
                                 {
@@ -527,6 +571,9 @@
                 },
                 "uniform": {
                     "properties": {
+                        "buffer": {
+                            "$ref": "#/definitions/TypedArrayResolution"
+                        },
                         "float": {
                             "$ref": "#/definitions/NumberResolution<number>"
                         },

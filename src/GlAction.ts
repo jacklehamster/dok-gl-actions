@@ -49,6 +49,7 @@ export interface GlAction extends DokAction {
       location: StringResolution<LocationName>;
       int?: NumberResolution;
       float?: NumberResolution;
+      buffer?: TypedArrayResolution;
     };
     clear?: NumberResolution | {
       color?: BooleanResolution;
@@ -70,14 +71,28 @@ export interface GlAction extends DokAction {
       imageId: StringResolution<ImageId>;
       onLoad?: GlAction[];
     };
+    initMatrix?: boolean;
     spriteMatrixTransform?: {
-      index: NumberResolution;
       translate: [NumberResolution, NumberResolution, NumberResolution];
       rotation: [NumberResolution, NumberResolution, NumberResolution];
       scale: [NumberResolution, NumberResolution, NumberResolution];
     };
-    projectionMatrixTransform?: {
-
+    bufferSubDataMatrix?: {
+      index: NumberResolution;
+    };
+    perspectiveProjectionMatrixTransform?: {
+      viewAngle: NumberResolution;
+      zNear?: NumberResolution;
+      zFar?: NumberResolution;
+      aspect?: NumberResolution;
+    };
+    orthogonalProjectionMatrixTransform?: {
+      viewportLeft?: NumberResolution;
+      viewportRight?: NumberResolution;
+      viewportTop?: NumberResolution;
+      viewportBottom?: NumberResolution;
+      zFar?: NumberResolution;
+      aspect?: NumberResolution;
     };
 };
 
