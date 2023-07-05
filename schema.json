@@ -85,14 +85,6 @@
         "ArrayResolution": {
             "anyOf": [
                 {
-                    "properties": {
-                        "formula": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                {
                     "items": {
                         "$ref": "#/definitions/Resolution"
                     },
@@ -104,21 +96,9 @@
             ]
         },
         "BooleanResolution": {
-            "anyOf": [
-                {
-                    "properties": {
-                        "formula": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                {
-                    "type": [
-                        "string",
-                        "boolean"
-                    ]
-                }
+            "type": [
+                "string",
+                "boolean"
             ]
         },
         "GlAction": {
@@ -158,10 +138,10 @@
                     "type": "array"
                 },
                 "activateProgram": {
-                    "$ref": "#/definitions/StringResolution<string>"
+                    "type": "string"
                 },
                 "bindBuffer": {
-                    "$ref": "#/definitions/StringResolution<string>"
+                    "type": "string"
                 },
                 "bindVertexArray": {
                     "type": "boolean"
@@ -178,10 +158,10 @@
                             "$ref": "#/definitions/NumberResolution<number>"
                         },
                         "location": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         },
                         "usage": {
-                            "$ref": "#/definitions/StringResolution<GlUsage>"
+                            "type": "string"
                         }
                     },
                     "type": "object"
@@ -201,7 +181,7 @@
                             "$ref": "#/definitions/NumberResolution<number>"
                         },
                         "location": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         },
                         "srcOffset": {
                             "$ref": "#/definitions/NumberResolution<number>"
@@ -211,14 +191,6 @@
                 },
                 "clear": {
                     "anyOf": [
-                        {
-                            "properties": {
-                                "formula": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
                         {
                             "properties": {
                                 "color": {
@@ -242,22 +214,10 @@
                     ]
                 },
                 "condition": {
-                    "anyOf": [
-                        {
-                            "properties": {
-                                "formula": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
-                            "type": [
-                                "string",
-                                "number",
-                                "boolean"
-                            ]
-                        }
+                    "type": [
+                        "string",
+                        "number",
+                        "boolean"
                     ]
                 },
                 "defaultValues": {
@@ -285,14 +245,14 @@
                 },
                 "hooks": {
                     "items": {
-                        "$ref": "#/definitions/StringResolution<string>"
+                        "type": "string"
                     },
                     "type": "array"
                 },
                 "image": {
                     "properties": {
                         "imageId": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         },
                         "onLoad": {
                             "items": {
@@ -301,7 +261,7 @@
                             "type": "array"
                         },
                         "src": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         }
                     },
                     "type": "object"
@@ -309,7 +269,7 @@
                 "loadTexture": {
                     "properties": {
                         "imageId": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         },
                         "textureId": {
                             "$ref": "#/definitions/TextureId"
@@ -318,22 +278,10 @@
                     "type": "object"
                 },
                 "lock": {
-                    "anyOf": [
-                        {
-                            "properties": {
-                                "formula": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
-                            "type": [
-                                "string",
-                                "number",
-                                "boolean"
-                            ]
-                        }
+                    "type": [
+                        "string",
+                        "number",
+                        "boolean"
                     ]
                 },
                 "log": {
@@ -402,14 +350,6 @@
                             "type": "object"
                         },
                         {
-                            "properties": {
-                                "formula": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
                             "items": {
                                 "$ref": "#/definitions/NumberResolution<number>"
                             },
@@ -445,14 +385,6 @@
                 "loop": {
                     "anyOf": [
                         {
-                            "properties": {
-                                "formula": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
                             "items": {
                                 "$ref": "#/definitions/NumberResolution<number>"
                             },
@@ -473,34 +405,22 @@
                     "$ref": "#/definitions/Record<string,Resolution>"
                 },
                 "pause": {
-                    "anyOf": [
-                        {
-                            "properties": {
-                                "formula": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
-                            "type": [
-                                "string",
-                                "number",
-                                "boolean"
-                            ]
-                        }
+                    "type": [
+                        "string",
+                        "number",
+                        "boolean"
                     ]
                 },
                 "program": {
                     "properties": {
                         "fragmentShader": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         },
                         "id": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         },
                         "vertexShader": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         }
                     },
                     "type": "object"
@@ -510,7 +430,7 @@
                     "type": "object"
                 },
                 "reference": {
-                    "$ref": "#/definitions/StringResolution<string>"
+                    "type": "string"
                 },
                 "refresh": {
                     "properties": {
@@ -521,7 +441,7 @@
                             "$ref": "#/definitions/NumberResolution<number>"
                         },
                         "processId": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         },
                         "stop": {
                             "$ref": "#/definitions/BooleanResolution"
@@ -533,22 +453,7 @@
                     "properties": {
                         "access": {
                             "items": {
-                                "anyOf": [
-                                    {
-                                        "properties": {
-                                            "formula": {
-                                                "type": "string"
-                                            }
-                                        },
-                                        "type": "object"
-                                    },
-                                    {
-                                        "type": [
-                                            "string",
-                                            "number"
-                                        ]
-                                    }
-                                ]
+                                "$ref": "#/definitions/NumberResolution<number>"
                             },
                             "type": "array"
                         },
@@ -556,7 +461,7 @@
                             "$ref": "#/definitions/Resolution"
                         },
                         "variable": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         }
                     },
                     "type": "object"
@@ -629,32 +534,20 @@
                             "$ref": "#/definitions/NumberResolution<number>"
                         },
                         "location": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         }
                     },
                     "type": "object"
                 },
                 "unlock": {
-                    "anyOf": [
-                        {
-                            "properties": {
-                                "formula": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
-                            "type": [
-                                "string",
-                                "number",
-                                "boolean"
-                            ]
-                        }
+                    "type": [
+                        "string",
+                        "number",
+                        "boolean"
                     ]
                 },
                 "updateAttributeBuffer": {
-                    "$ref": "#/definitions/StringResolution<string>"
+                    "type": "string"
                 },
                 "vertexAttribPointer": {
                     "properties": {
@@ -691,10 +584,10 @@
                 "video": {
                     "properties": {
                         "imageId": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         },
                         "src": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         },
                         "volume": {
                             "$ref": "#/definitions/NumberResolution<number>"
@@ -775,7 +668,7 @@
             "properties": {
                 "hooks": {
                     "items": {
-                        "$ref": "#/definitions/StringResolution<string>"
+                        "type": "string"
                     },
                     "type": "array"
                 }
@@ -785,17 +678,9 @@
         "LocationResolution": {
             "anyOf": [
                 {
-                    "properties": {
-                        "formula": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                {
                     "items": [
                         {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         },
                         {
                             "$ref": "#/definitions/NumberResolution<number>"
@@ -878,14 +763,6 @@
                             "type": "object"
                         },
                         {
-                            "properties": {
-                                "formula": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
                             "items": {
                                 "$ref": "#/definitions/NumberResolution<number>"
                             },
@@ -924,34 +801,14 @@
         "LogicAction": {
             "properties": {
                 "condition": {
-                    "anyOf": [
-                        {
-                            "properties": {
-                                "formula": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
-                            "type": [
-                                "string",
-                                "number",
-                                "boolean"
-                            ]
-                        }
+                    "type": [
+                        "string",
+                        "number",
+                        "boolean"
                     ]
                 },
                 "loop": {
                     "anyOf": [
-                        {
-                            "properties": {
-                                "formula": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
                         {
                             "items": {
                                 "$ref": "#/definitions/NumberResolution<number>"
@@ -978,14 +835,6 @@
         "NumberResolution<2|1|3|4>": {
             "anyOf": [
                 {
-                    "properties": {
-                        "formula": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                {
                     "enum": [
                         1,
                         2,
@@ -1000,21 +849,9 @@
             ]
         },
         "NumberResolution<number>": {
-            "anyOf": [
-                {
-                    "properties": {
-                        "formula": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                {
-                    "type": [
-                        "string",
-                        "number"
-                    ]
-                }
+            "type": [
+                "string",
+                "number"
             ]
         },
         "PauseAction": {
@@ -1023,60 +860,24 @@
                     "$ref": "#/definitions/NumberResolution<number>"
                 },
                 "lock": {
-                    "anyOf": [
-                        {
-                            "properties": {
-                                "formula": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
-                            "type": [
-                                "string",
-                                "number",
-                                "boolean"
-                            ]
-                        }
+                    "type": [
+                        "string",
+                        "number",
+                        "boolean"
                     ]
                 },
                 "pause": {
-                    "anyOf": [
-                        {
-                            "properties": {
-                                "formula": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
-                            "type": [
-                                "string",
-                                "number",
-                                "boolean"
-                            ]
-                        }
+                    "type": [
+                        "string",
+                        "number",
+                        "boolean"
                     ]
                 },
                 "unlock": {
-                    "anyOf": [
-                        {
-                            "properties": {
-                                "formula": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
-                            "type": [
-                                "string",
-                                "number",
-                                "boolean"
-                            ]
-                        }
+                    "type": [
+                        "string",
+                        "number",
+                        "boolean"
                     ]
                 }
             },
@@ -1102,7 +903,7 @@
         "ReferenceAction": {
             "properties": {
                 "reference": {
-                    "$ref": "#/definitions/StringResolution<string>"
+                    "type": "string"
                 }
             },
             "type": "object"
@@ -1118,7 +919,7 @@
                             "$ref": "#/definitions/NumberResolution<number>"
                         },
                         "processId": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         },
                         "stop": {
                             "$ref": "#/definitions/BooleanResolution"
@@ -1195,14 +996,6 @@
                     "type": "object"
                 },
                 {
-                    "properties": {
-                        "formula": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                {
                     "items": {
                         "$ref": "#/definitions/NumberResolution<number>"
                     },
@@ -1249,22 +1042,7 @@
                     "properties": {
                         "access": {
                             "items": {
-                                "anyOf": [
-                                    {
-                                        "properties": {
-                                            "formula": {
-                                                "type": "string"
-                                            }
-                                        },
-                                        "type": "object"
-                                    },
-                                    {
-                                        "type": [
-                                            "string",
-                                            "number"
-                                        ]
-                                    }
-                                ]
+                                "$ref": "#/definitions/NumberResolution<number>"
                             },
                             "type": "array"
                         },
@@ -1272,7 +1050,7 @@
                             "$ref": "#/definitions/Resolution"
                         },
                         "variable": {
-                            "$ref": "#/definitions/StringResolution<string>"
+                            "type": "string"
                         }
                     },
                     "type": "object"
@@ -1282,36 +1060,6 @@
                 }
             },
             "type": "object"
-        },
-        "StringResolution<GlUsage>": {
-            "anyOf": [
-                {
-                    "properties": {
-                        "formula": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                {
-                    "type": "string"
-                }
-            ]
-        },
-        "StringResolution<string>": {
-            "anyOf": [
-                {
-                    "properties": {
-                        "formula": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                {
-                    "type": "string"
-                }
-            ]
         },
         "Tag": {
             "anyOf": [
@@ -1435,14 +1183,6 @@
                     "patternProperties": {
                         "^[0-9]+$": {
                             "type": "number"
-                        }
-                    },
-                    "type": "object"
-                },
-                {
-                    "properties": {
-                        "formula": {
-                            "type": "string"
                         }
                     },
                     "type": "object"
