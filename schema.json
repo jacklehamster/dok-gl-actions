@@ -414,22 +414,22 @@
                 },
                 "orthogonalProjectionMatrixTransform": {
                     "properties": {
-                        "aspect": {
+                        "bottom": {
                             "$ref": "#/definitions/NumberResolution<number>"
                         },
-                        "viewportBottom": {
+                        "left": {
                             "$ref": "#/definitions/NumberResolution<number>"
                         },
-                        "viewportLeft": {
+                        "right": {
                             "$ref": "#/definitions/NumberResolution<number>"
                         },
-                        "viewportRight": {
-                            "$ref": "#/definitions/NumberResolution<number>"
-                        },
-                        "viewportTop": {
+                        "top": {
                             "$ref": "#/definitions/NumberResolution<number>"
                         },
                         "zFar": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "zNear": {
                             "$ref": "#/definitions/NumberResolution<number>"
                         }
                     },

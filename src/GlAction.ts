@@ -87,12 +87,12 @@ export interface GlAction extends DokAction {
       aspect?: NumberResolution;
     };
     orthogonalProjectionMatrixTransform?: {
-      viewportLeft?: NumberResolution;
-      viewportRight?: NumberResolution;
-      viewportTop?: NumberResolution;
-      viewportBottom?: NumberResolution;
+      left?: NumberResolution;
+      right?: NumberResolution;
+      top?: NumberResolution;
+      bottom?: NumberResolution;
       zFar?: NumberResolution;
-      aspect?: NumberResolution;
+      zNear?: NumberResolution;
     };
 };
 
