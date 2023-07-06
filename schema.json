@@ -35,6 +35,9 @@
                             },
                             {
                                 "$ref": "#/definitions/SetAction"
+                            },
+                            {
+                                "$ref": "#/definitions/ExternalAction"
                             }
                         ]
                     },
@@ -74,6 +77,9 @@
                             },
                             {
                                 "$ref": "#/definitions/SetAction"
+                            },
+                            {
+                                "$ref": "#/definitions/ExternalAction"
                             }
                         ]
                     },
@@ -100,6 +106,117 @@
                 "string",
                 "boolean"
             ]
+        },
+        "ExternalAction": {
+            "properties": {
+                "callExternal": {
+                    "properties": {
+                        "arguments": {
+                            "anyOf": [
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "items": {
+                                        "$ref": "#/definitions/NumberResolution<number>"
+                                    },
+                                    "type": "array"
+                                },
+                                {
+                                    "items": {
+                                        "$ref": "#/definitions/Resolution"
+                                    },
+                                    "type": "array"
+                                },
+                                {
+                                    "additionalProperties": {
+                                        "$ref": "#/definitions/Resolution"
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "items": {
+                                        "$ref": "#/definitions/Resolution"
+                                    },
+                                    "type": "array"
+                                },
+                                {
+                                    "type": [
+                                        "string",
+                                        "number",
+                                        "boolean"
+                                    ]
+                                }
+                            ]
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
         },
         "GlAction": {
             "properties": {
@@ -132,6 +249,9 @@
                             },
                             {
                                 "$ref": "#/definitions/SetAction"
+                            },
+                            {
+                                "$ref": "#/definitions/ExternalAction"
                             }
                         ]
                     },
@@ -193,6 +313,112 @@
                     "properties": {
                         "index": {
                             "$ref": "#/definitions/NumberResolution<number>"
+                        }
+                    },
+                    "type": "object"
+                },
+                "callExternal": {
+                    "properties": {
+                        "arguments": {
+                            "anyOf": [
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "items": {
+                                        "$ref": "#/definitions/NumberResolution<number>"
+                                    },
+                                    "type": "array"
+                                },
+                                {
+                                    "items": {
+                                        "$ref": "#/definitions/Resolution"
+                                    },
+                                    "type": "array"
+                                },
+                                {
+                                    "additionalProperties": {
+                                        "$ref": "#/definitions/Resolution"
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "items": {
+                                        "$ref": "#/definitions/Resolution"
+                                    },
+                                    "type": "array"
+                                },
+                                {
+                                    "type": [
+                                        "string",
+                                        "number",
+                                        "boolean"
+                                    ]
+                                }
+                            ]
+                        },
+                        "name": {
+                            "type": "string"
                         }
                     },
                     "type": "object"
@@ -693,6 +919,9 @@
                             },
                             {
                                 "$ref": "#/definitions/SetAction"
+                            },
+                            {
+                                "$ref": "#/definitions/ExternalAction"
                             }
                         ]
                     },
