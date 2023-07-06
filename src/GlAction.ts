@@ -1,5 +1,5 @@
 import { BooleanResolution, DokAction, NumberResolution, StringResolution, TypedArrayResolution } from "dok-actions";
-import { GlType, GlUsage } from "./types";
+import { GlDepthFunction, GlType, GlUsage } from "./types";
 import { ImageId, TextureId, Url } from "./ImageId";
 
 export type LocationName = string;
@@ -94,31 +94,8 @@ export interface GlAction extends DokAction {
       zFar?: NumberResolution;
       zNear?: NumberResolution;
     };
+    enableDepth?: {
+      enable?: BooleanResolution;
+      depthFunc?: StringResolution<GlDepthFunction>;
+    }
 };
-
-
-// setProjectionMatrices(viewAngle, pixelScale) {
-//   const gl = this.gl;
-//   const uniforms = this.shader.uniforms;
-//   const zNear = -100; //0.01;
-//   const zFar = 5000;
-
-//   const fieldOfView = (viewAngle || 45) * Constants.DEG_TO_RAD; // in radians
-//   const aspect = gl.drawingBufferWidth / gl.drawingBufferHeight;
-//   const perspectiveMatrix = mat4.perspective(mat4.create(), fieldOfView, aspect, zNear, zFar);
-//   const pixelScaleMultiplier = 1 / pixelScale;
-
-//   const viewportWidth = gl.drawingBufferWidth / pixelScaleMultiplier;
-//   const viewportHeight = gl.drawingBufferHeight / pixelScaleMultiplier;
-//   const orthoMatrix = mat4.ortho(
-//     mat4.create(),
-//     -viewportWidth,
-//     viewportWidth,
-//     -viewportHeight,
-//     viewportHeight,
-//     zNear,
-//     zFar,
-//   );
-//   gl.uniformMatrix4fv(uniforms.ortho.location, false, orthoMatrix);
-//   gl.uniformMatrix4fv(uniforms.perspective.location, false, perspectiveMatrix);
-// }

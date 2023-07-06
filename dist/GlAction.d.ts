@@ -1,5 +1,5 @@
 import { BooleanResolution, DokAction, NumberResolution, StringResolution, TypedArrayResolution } from "dok-actions";
-import { GlType, GlUsage } from "./types";
+import { GlDepthFunction, GlType, GlUsage } from "./types";
 import { ImageId, TextureId, Url } from "./ImageId";
 export declare type LocationName = string;
 export declare type LocationResolution = LocationName | StringResolution | [StringResolution<LocationName>, NumberResolution];
@@ -91,5 +91,9 @@ export interface GlAction extends DokAction {
         bottom?: NumberResolution;
         zFar?: NumberResolution;
         zNear?: NumberResolution;
+    };
+    enableDepth?: {
+        enable?: BooleanResolution;
+        depthFunc?: StringResolution<GlDepthFunction>;
     };
 }

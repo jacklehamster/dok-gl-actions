@@ -248,6 +248,17 @@
                     },
                     "type": "object"
                 },
+                "enableDepth": {
+                    "properties": {
+                        "depthFunc": {
+                            "type": "string"
+                        },
+                        "enable": {
+                            "$ref": "#/definitions/BooleanResolution"
+                        }
+                    },
+                    "type": "object"
+                },
                 "executeScript": {
                     "type": "string"
                 },
