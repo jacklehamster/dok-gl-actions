@@ -209,8 +209,8 @@
                                 }
                             ]
                         },
-                        "name": {
-                            "type": "string"
+                        "method": {
+                            "$ref": "#/definitions/Resolution"
                         }
                     },
                     "type": "object"
@@ -417,8 +417,8 @@
                                 }
                             ]
                         },
-                        "name": {
-                            "type": "string"
+                        "method": {
+                            "$ref": "#/definitions/Resolution"
                         }
                     },
                     "type": "object"
