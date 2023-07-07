@@ -195,6 +195,20 @@
                                     "type": "object"
                                 },
                                 {
+                                    "properties": {
+                                        "access": {
+                                            "items": {
+                                                "$ref": "#/definitions/NumberResolution<number>"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "subject": {
+                                            "$ref": "#/definitions/Resolution"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
                                     "items": {
                                         "$ref": "#/definitions/Resolution"
                                     },
@@ -402,6 +416,20 @@
                                 {
                                     "additionalProperties": {
                                         "$ref": "#/definitions/Resolution"
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "properties": {
+                                        "access": {
+                                            "items": {
+                                                "$ref": "#/definitions/NumberResolution<number>"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "subject": {
+                                            "$ref": "#/definitions/Resolution"
+                                        }
                                     },
                                     "type": "object"
                                 },
@@ -618,6 +646,20 @@
                         {
                             "additionalProperties": {
                                 "$ref": "#/definitions/Resolution"
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "access": {
+                                    "items": {
+                                        "$ref": "#/definitions/NumberResolution<number>"
+                                    },
+                                    "type": "array"
+                                },
+                                "subject": {
+                                    "$ref": "#/definitions/Resolution"
+                                }
                             },
                             "type": "object"
                         },
@@ -1074,6 +1116,20 @@
                             "type": "object"
                         },
                         {
+                            "properties": {
+                                "access": {
+                                    "items": {
+                                        "$ref": "#/definitions/NumberResolution<number>"
+                                    },
+                                    "type": "array"
+                                },
+                                "subject": {
+                                    "$ref": "#/definitions/Resolution"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
                             "items": {
                                 "$ref": "#/definitions/Resolution"
                             },
@@ -1303,6 +1359,20 @@
                 {
                     "additionalProperties": {
                         "$ref": "#/definitions/Resolution"
+                    },
+                    "type": "object"
+                },
+                {
+                    "properties": {
+                        "access": {
+                            "items": {
+                                "$ref": "#/definitions/NumberResolution<number>"
+                            },
+                            "type": "array"
+                        },
+                        "subject": {
+                            "$ref": "#/definitions/Resolution"
+                        }
                     },
                     "type": "object"
                 },
