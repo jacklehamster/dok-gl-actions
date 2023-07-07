@@ -210,6 +210,9 @@
                             ]
                         },
                         "method": {
+                            "type": "string"
+                        },
+                        "subject": {
                             "$ref": "#/definitions/Resolution"
                         }
                     },
@@ -418,6 +421,9 @@
                             ]
                         },
                         "method": {
+                            "type": "string"
+                        },
+                        "subject": {
                             "$ref": "#/definitions/Resolution"
                         }
                     },
