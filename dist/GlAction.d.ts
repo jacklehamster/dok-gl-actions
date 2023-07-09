@@ -63,6 +63,7 @@ export interface GlAction extends DokAction {
         src: StringResolution<Url>;
         imageId: StringResolution<ImageId>;
         volume?: NumberResolution;
+        onLoad?: GlAction[];
     };
     image?: {
         src: StringResolution<Url>;

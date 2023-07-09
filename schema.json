@@ -1,10 +1,13 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
-        "ActionsAction<GlAction>": {
-            "properties": {
-                "actions": {
-                    "items": {
+        "ActionList<GlAction>": {
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "#/definitions/ActionList<GlAction>"
+                    },
+                    {
                         "allOf": [
                             {
                                 "$ref": "#/definitions/GlAction"
@@ -40,16 +43,18 @@
                                 "$ref": "#/definitions/ExternalAction"
                             }
                         ]
-                    },
-                    "type": "array"
-                }
+                    }
+                ]
             },
-            "type": "object"
+            "type": "array"
         },
-        "ActionsAction<{}>": {
-            "properties": {
-                "actions": {
-                    "items": {
+        "ActionList<{}>": {
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "#/definitions/ActionList<{}>"
+                    },
+                    {
                         "allOf": [
                             {
                                 "$ref": "#/definitions/ScriptAction"
@@ -82,8 +87,23 @@
                                 "$ref": "#/definitions/ExternalAction"
                             }
                         ]
-                    },
-                    "type": "array"
+                    }
+                ]
+            },
+            "type": "array"
+        },
+        "ActionsAction<GlAction>": {
+            "properties": {
+                "actions": {
+                    "$ref": "#/definitions/ActionList<GlAction>"
+                }
+            },
+            "type": "object"
+        },
+        "ActionsAction<{}>": {
+            "properties": {
+                "actions": {
+                    "$ref": "#/definitions/ActionList<{}>"
                 }
             },
             "type": "object"
@@ -238,41 +258,7 @@
         "GlAction": {
             "properties": {
                 "actions": {
-                    "items": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/ScriptAction"
-                            },
-                            {
-                                "$ref": "#/definitions/LogAction"
-                            },
-                            {
-                                "$ref": "#/definitions/ActionsAction<{}>"
-                            },
-                            {
-                                "$ref": "#/definitions/LogicAction"
-                            },
-                            {
-                                "$ref": "#/definitions/PauseAction"
-                            },
-                            {
-                                "$ref": "#/definitions/HookAction"
-                            },
-                            {
-                                "$ref": "#/definitions/ReferenceAction"
-                            },
-                            {
-                                "$ref": "#/definitions/RefreshAction"
-                            },
-                            {
-                                "$ref": "#/definitions/SetAction"
-                            },
-                            {
-                                "$ref": "#/definitions/ExternalAction"
-                            }
-                        ]
-                    },
-                    "type": "array"
+                    "$ref": "#/definitions/ActionList<{}>"
                 },
                 "activateProgram": {
                     "type": "string"
@@ -918,6 +904,12 @@
                         "imageId": {
                             "type": "string"
                         },
+                        "onLoad": {
+                            "items": {
+                                "$ref": "#/definitions/GlAction"
+                            },
+                            "type": "array"
+                        },
                         "src": {
                             "type": "string"
                         },
@@ -936,44 +928,7 @@
         "GlScript": {
             "properties": {
                 "actions": {
-                    "items": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/GlAction"
-                            },
-                            {
-                                "$ref": "#/definitions/ScriptAction"
-                            },
-                            {
-                                "$ref": "#/definitions/LogAction"
-                            },
-                            {
-                                "$ref": "#/definitions/ActionsAction<GlAction>"
-                            },
-                            {
-                                "$ref": "#/definitions/LogicAction"
-                            },
-                            {
-                                "$ref": "#/definitions/PauseAction"
-                            },
-                            {
-                                "$ref": "#/definitions/HookAction"
-                            },
-                            {
-                                "$ref": "#/definitions/ReferenceAction"
-                            },
-                            {
-                                "$ref": "#/definitions/RefreshAction"
-                            },
-                            {
-                                "$ref": "#/definitions/SetAction"
-                            },
-                            {
-                                "$ref": "#/definitions/ExternalAction"
-                            }
-                        ]
-                    },
-                    "type": "array"
+                    "$ref": "#/definitions/ActionList<GlAction>"
                 },
                 "name": {
                     "type": "string"
