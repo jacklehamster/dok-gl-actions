@@ -65,12 +65,16 @@ export interface GlAction extends DokAction {
       src: StringResolution<Url>;
       imageId: StringResolution<ImageId>;
       volume?: NumberResolution;
-      onLoad?: GlAction[];
+      callback: {
+        onLoad?: GlAction[];
+      };
     };
     image?: {
       src: StringResolution<Url>;
       imageId: StringResolution<ImageId>;
-      onLoad?: GlAction[];
+      callback: {
+        onLoad?: GlAction[];
+      };
     };
     initMatrix?: boolean;
     spriteMatrixTransform?: {

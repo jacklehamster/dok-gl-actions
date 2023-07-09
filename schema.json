@@ -22,6 +22,9 @@
                                 "$ref": "#/definitions/ActionsAction<GlAction>"
                             },
                             {
+                                "$ref": "#/definitions/CallbackAction<GlAction>"
+                            },
+                            {
                                 "$ref": "#/definitions/LogicAction"
                             },
                             {
@@ -64,6 +67,9 @@
                             },
                             {
                                 "$ref": "#/definitions/ActionsAction<{}>"
+                            },
+                            {
+                                "$ref": "#/definitions/CallbackAction<{}>"
                             },
                             {
                                 "$ref": "#/definitions/LogicAction"
@@ -126,6 +132,28 @@
                 "string",
                 "boolean"
             ]
+        },
+        "CallbackAction<GlAction>": {
+            "properties": {
+                "callback": {
+                    "$ref": "#/definitions/Record<string,ActionList<GlAction>>"
+                },
+                "executeCallback": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "CallbackAction<{}>": {
+            "properties": {
+                "callback": {
+                    "$ref": "#/definitions/Record<string,ActionList<{}>>"
+                },
+                "executeCallback": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
         },
         "ExternalAction": {
             "properties": {
@@ -443,6 +471,9 @@
                     },
                     "type": "object"
                 },
+                "callback": {
+                    "$ref": "#/definitions/Record<string,ActionList<{}>>"
+                },
                 "clear": {
                     "anyOf": [
                         {
@@ -505,6 +536,9 @@
                     },
                     "type": "object"
                 },
+                "executeCallback": {
+                    "type": "string"
+                },
                 "executeScript": {
                     "type": "string"
                 },
@@ -516,14 +550,19 @@
                 },
                 "image": {
                     "properties": {
+                        "callback": {
+                            "properties": {
+                                "onLoad": {
+                                    "items": {
+                                        "$ref": "#/definitions/GlAction"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
                         "imageId": {
                             "type": "string"
-                        },
-                        "onLoad": {
-                            "items": {
-                                "$ref": "#/definitions/GlAction"
-                            },
-                            "type": "array"
                         },
                         "src": {
                             "type": "string"
@@ -901,14 +940,19 @@
                 },
                 "video": {
                     "properties": {
+                        "callback": {
+                            "properties": {
+                                "onLoad": {
+                                    "items": {
+                                        "$ref": "#/definitions/GlAction"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
                         "imageId": {
                             "type": "string"
-                        },
-                        "onLoad": {
-                            "items": {
-                                "$ref": "#/definitions/GlAction"
-                            },
-                            "type": "array"
                         },
                         "src": {
                             "type": "string"
@@ -1199,6 +1243,12 @@
                     "type": "string"
                 }
             },
+            "type": "object"
+        },
+        "Record<string,ActionList<GlAction>>": {
+            "type": "object"
+        },
+        "Record<string,ActionList<{}>>": {
             "type": "object"
         },
         "Record<string,Resolution>": {
