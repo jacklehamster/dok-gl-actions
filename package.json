@@ -39,6 +39,6 @@
    ],
    "homepage": "https://github.com/jacklehamster/dok-gl-actions#readme",
    "dependencies": {
-      "dok-actions": "^1.1.50"
+      "dok-actions": "^1.1.51"
    }
 }
