@@ -311,6 +311,9 @@
                         "location": {
                             "type": "string"
                         },
+                        "target": {
+                            "type": "string"
+                        },
                         "usage": {
                             "type": "string"
                         }

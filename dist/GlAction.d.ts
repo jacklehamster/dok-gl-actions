@@ -1,5 +1,5 @@
 import { BooleanResolution, DokAction, NumberResolution, StringResolution, TypedArrayResolution } from "dok-actions";
-import { GlDepthFunction, GlType, GlUsage } from "./types";
+import { GlBufferTarget, GlDepthFunction, GlType, GlUsage } from "./types";
 import { ImageId, TextureId, Url } from "./ImageId";
 export declare type LocationName = string;
 export declare type LocationResolution = LocationName | StringResolution | [StringResolution<LocationName>, NumberResolution];
@@ -10,6 +10,7 @@ export interface GlAction extends DokAction {
         fragmentShader: StringResolution;
     };
     bufferData?: {
+        target?: StringResolution<GlBufferTarget>;
         location: StringResolution<LocationName>;
         buffer?: TypedArrayResolution;
         length?: NumberResolution;
