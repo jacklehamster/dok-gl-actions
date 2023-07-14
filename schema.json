@@ -339,6 +339,9 @@
                         },
                         "srcOffset": {
                             "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "target": {
+                            "type": "string"
                         }
                     },
                     "type": "object"

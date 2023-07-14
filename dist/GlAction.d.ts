@@ -18,6 +18,7 @@ export interface GlAction extends DokAction {
         glType?: GlType;
     };
     bufferSubData?: {
+        target?: StringResolution<GlBufferTarget>;
         location?: StringResolution<LocationName>;
         data: TypedArrayResolution;
         dstByteOffset?: NumberResolution;
