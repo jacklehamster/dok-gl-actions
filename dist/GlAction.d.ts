@@ -15,7 +15,7 @@ export interface GlAction extends DokAction {
         buffer?: TypedArrayResolution;
         length?: NumberResolution;
         usage?: StringResolution<GlUsage>;
-        glType?: GlType;
+        glType?: StringResolution<GlType>;
     };
     bufferSubData?: {
         target?: StringResolution<GlBufferTarget>;
@@ -24,7 +24,7 @@ export interface GlAction extends DokAction {
         dstByteOffset?: NumberResolution;
         srcOffset?: NumberResolution;
         length?: NumberResolution;
-        glType?: GlType;
+        glType?: StringResolution<GlType>;
     };
     updateAttributeBuffer?: StringResolution<LocationName>;
     bindVertexArray?: boolean;
@@ -37,7 +37,7 @@ export interface GlAction extends DokAction {
     vertexAttribPointer?: {
         location: LocationResolution;
         size?: NumberResolution<1 | 2 | 3 | 4>;
-        glType?: GlType;
+        glType?: StringResolution<GlType>;
         normalized?: BooleanResolution;
         stride?: NumberResolution;
         offset?: NumberResolution;

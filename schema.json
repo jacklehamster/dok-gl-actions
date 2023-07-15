@@ -303,7 +303,7 @@
                             "$ref": "#/definitions/TypedArrayResolution"
                         },
                         "glType": {
-                            "$ref": "#/definitions/GlType"
+                            "type": "string"
                         },
                         "length": {
                             "$ref": "#/definitions/NumberResolution<number>"
@@ -329,7 +329,7 @@
                             "$ref": "#/definitions/NumberResolution<number>"
                         },
                         "glType": {
-                            "$ref": "#/definitions/GlType"
+                            "type": "string"
                         },
                         "length": {
                             "$ref": "#/definitions/NumberResolution<number>"
@@ -921,7 +921,7 @@
                             "$ref": "#/definitions/BooleanResolution"
                         },
                         "glType": {
-                            "$ref": "#/definitions/GlType"
+                            "type": "string"
                         },
                         "location": {
                             "$ref": "#/definitions/LocationResolution"
@@ -991,18 +991,6 @@
                 }
             },
             "type": "object"
-        },
-        "GlType": {
-            "enum": [
-                "BYTE",
-                "FLOAT",
-                "INT",
-                "SHORT",
-                "UNSIGNED_BYTE",
-                "UNSIGNED_INT",
-                "UNSIGNED_SHORT"
-            ],
-            "type": "string"
         },
         "HookAction": {
             "properties": {
