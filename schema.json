@@ -292,7 +292,15 @@
                     "type": "string"
                 },
                 "bindBuffer": {
-                    "type": "string"
+                    "properties": {
+                        "location": {
+                            "$ref": "#/definitions/LocationResolution"
+                        },
+                        "target": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
                 },
                 "bindVertexArray": {
                     "type": "boolean"
