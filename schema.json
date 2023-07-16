@@ -294,7 +294,7 @@
                 "bindBuffer": {
                     "properties": {
                         "location": {
-                            "$ref": "#/definitions/LocationResolution"
+                            "type": "string"
                         },
                         "target": {
                             "type": "string"
@@ -918,7 +918,15 @@
                     ]
                 },
                 "updateAttributeBuffer": {
-                    "type": "string"
+                    "properties": {
+                        "location": {
+                            "type": "string"
+                        },
+                        "target": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
                 },
                 "vertexAttribPointer": {
                     "properties": {

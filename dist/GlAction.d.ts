@@ -26,11 +26,14 @@ export interface GlAction extends DokAction {
         length?: NumberResolution;
         glType?: StringResolution<GlType>;
     };
-    updateAttributeBuffer?: StringResolution<LocationName>;
+    updateAttributeBuffer?: {
+        target?: StringResolution<GlBufferTarget>;
+        location: StringResolution<LocationName>;
+    };
     bindVertexArray?: boolean;
     bindBuffer?: {
         target?: StringResolution<GlBufferTarget>;
-        location: LocationResolution;
+        location: StringResolution<LocationName>;
     };
     drawArrays?: {
         vertexFirst?: NumberResolution;
