@@ -539,6 +539,20 @@
                     },
                     "type": "object"
                 },
+                "drawElements": {
+                    "properties": {
+                        "count": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "glType": {
+                            "type": "string"
+                        },
+                        "offset": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        }
+                    },
+                    "type": "object"
+                },
                 "enableDepth": {
                     "properties": {
                         "depthFunc": {

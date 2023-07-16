@@ -42,6 +42,11 @@ export interface GlAction extends DokAction {
       vertexCount?: NumberResolution;
       instanceCount?: NumberResolution;
     };
+    drawElements?: {
+      count?: NumberResolution;
+      glType?: StringResolution<GlType>;
+      offset?: NumberResolution;
+    };     
     vertexAttribPointer?: {
       location: LocationResolution;
       size?: NumberResolution<1|2|3|4>;
