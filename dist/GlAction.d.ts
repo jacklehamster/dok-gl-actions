@@ -74,7 +74,7 @@ export interface GlAction extends DokAction {
         textureId: TextureId;
     };
     video?: {
-        src: StringResolution<Url>;
+        src: StringResolution<Url | "webcam">;
         imageId: StringResolution<ImageId>;
         volume?: NumberResolution;
         callback: {

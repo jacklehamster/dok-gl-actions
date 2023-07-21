@@ -140,6 +140,9 @@
                 },
                 "executeCallback": {
                     "type": "string"
+                },
+                "parameters": {
+                    "$ref": "#/definitions/Record<string,Resolution>"
                 }
             },
             "type": "object"
@@ -151,6 +154,9 @@
                 },
                 "executeCallback": {
                     "type": "string"
+                },
+                "parameters": {
+                    "$ref": "#/definitions/Record<string,Resolution>"
                 }
             },
             "type": "object"
