@@ -1,5 +1,5 @@
 import { BooleanResolution, DokAction, NumberResolution, StringResolution, TypedArrayResolution } from "dok-actions";
-import { GlBufferTarget, GlDepthFunction, GlType, GlUsage } from "./types";
+import { GlBufferTarget, GlType, GlUsage } from "./types";
 import { ImageId, TextureId, Url } from "./ImageId";
 export declare type LocationName = string;
 export declare type LocationResolution = LocationName | StringResolution | [StringResolution<LocationName>, NumberResolution];
@@ -72,6 +72,8 @@ export interface GlAction extends DokAction {
     loadTexture?: {
         imageId: StringResolution<ImageId>;
         textureId: TextureId;
+        sourceRect?: [NumberResolution, NumberResolution, NumberResolution, NumberResolution];
+        destRect?: [NumberResolution, NumberResolution, NumberResolution, NumberResolution];
     };
     video?: {
         src: StringResolution<Url | "webcam">;
@@ -110,9 +112,5 @@ export interface GlAction extends DokAction {
         bottom?: NumberResolution;
         zFar?: NumberResolution;
         zNear?: NumberResolution;
-    };
-    enableDepth?: {
-        enable?: BooleanResolution;
-        depthFunc?: StringResolution<GlDepthFunction>;
     };
 }

@@ -562,17 +562,6 @@
                     },
                     "type": "object"
                 },
-                "enableDepth": {
-                    "properties": {
-                        "depthFunc": {
-                            "type": "string"
-                        },
-                        "enable": {
-                            "$ref": "#/definitions/BooleanResolution"
-                        }
-                    },
-                    "type": "object"
-                },
                 "executeCallback": {
                     "type": "string"
                 },
@@ -612,8 +601,46 @@
                 },
                 "loadTexture": {
                     "properties": {
+                        "destRect": {
+                            "items": [
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                },
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                },
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                },
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                }
+                            ],
+                            "maxItems": 4,
+                            "minItems": 4,
+                            "type": "array"
+                        },
                         "imageId": {
                             "type": "string"
+                        },
+                        "sourceRect": {
+                            "items": [
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                },
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                },
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                },
+                                {
+                                    "$ref": "#/definitions/NumberResolution<number>"
+                                }
+                            ],
+                            "maxItems": 4,
+                            "minItems": 4,
+                            "type": "array"
                         },
                         "textureId": {
                             "$ref": "#/definitions/TextureId"
