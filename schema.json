@@ -599,6 +599,20 @@
                 "initMatrix": {
                     "type": "boolean"
                 },
+                "initTexture": {
+                    "properties": {
+                        "height": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "textureId": {
+                            "$ref": "#/definitions/NumberResolution<TextureIndex>"
+                        },
+                        "width": {
+                            "$ref": "#/definitions/NumberResolution<number>"
+                        }
+                    },
+                    "type": "object"
+                },
                 "loadTexture": {
                     "properties": {
                         "destRect": {

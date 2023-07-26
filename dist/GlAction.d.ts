@@ -70,6 +70,11 @@ export interface GlAction extends DokAction {
         stencil?: BooleanResolution;
     };
     activateProgram?: StringResolution;
+    initTexture?: {
+        textureId: NumberResolution<TextureIndex>;
+        width?: NumberResolution<GLsizei>;
+        height?: NumberResolution<GLsizei>;
+    };
     loadTexture?: {
         imageId: StringResolution<ImageId>;
         textureId: NumberResolution<TextureIndex>;
