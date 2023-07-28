@@ -256,6 +256,9 @@
                                             },
                                             "type": "array"
                                         },
+                                        "formula": {
+                                            "type": "string"
+                                        },
                                         "subject": {
                                             "$ref": "#/definitions/Resolution"
                                         }
@@ -460,6 +463,9 @@
                                                 "$ref": "#/definitions/NumberResolution<number>"
                                             },
                                             "type": "array"
+                                        },
+                                        "formula": {
+                                            "type": "string"
                                         },
                                         "subject": {
                                             "$ref": "#/definitions/Resolution"
@@ -759,6 +765,9 @@
                                         "$ref": "#/definitions/NumberResolution<number>"
                                     },
                                     "type": "array"
+                                },
+                                "formula": {
+                                    "type": "string"
                                 },
                                 "subject": {
                                     "$ref": "#/definitions/Resolution"
@@ -1202,6 +1211,9 @@
                                     },
                                     "type": "array"
                                 },
+                                "formula": {
+                                    "type": "string"
+                                },
                                 "subject": {
                                     "$ref": "#/definitions/Resolution"
                                 }
@@ -1498,6 +1510,9 @@
                                 "$ref": "#/definitions/NumberResolution<number>"
                             },
                             "type": "array"
+                        },
+                        "formula": {
+                            "type": "string"
                         },
                         "subject": {
                             "$ref": "#/definitions/Resolution"
