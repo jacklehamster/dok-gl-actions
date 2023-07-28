@@ -64,7 +64,9 @@ export interface GlAction extends DokAction {
       location: StringResolution<LocationName>;
       int?: NumberResolution;
       float?: NumberResolution;
-      buffer?: TypedArrayResolution;
+      ints?: TypedArrayResolution;
+      floats?: TypedArrayResolution;
+      matrix?: TypedArrayResolution;
     };
     clear?: NumberResolution | {
       color?: BooleanResolution;

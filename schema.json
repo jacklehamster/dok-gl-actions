@@ -959,17 +959,23 @@
                 },
                 "uniform": {
                     "properties": {
-                        "buffer": {
-                            "$ref": "#/definitions/TypedArrayResolution"
-                        },
                         "float": {
                             "$ref": "#/definitions/NumberResolution<number>"
+                        },
+                        "floats": {
+                            "$ref": "#/definitions/TypedArrayResolution"
                         },
                         "int": {
                             "$ref": "#/definitions/NumberResolution<number>"
                         },
+                        "ints": {
+                            "$ref": "#/definitions/TypedArrayResolution"
+                        },
                         "location": {
                             "type": "string"
+                        },
+                        "matrix": {
+                            "$ref": "#/definitions/TypedArrayResolution"
                         }
                     },
                     "type": "object"
