@@ -1078,6 +1078,12 @@
                 "name": {
                     "type": "string"
                 },
+                "scripts": {
+                    "items": {
+                        "$ref": "#/definitions/Script<GlAction>"
+                    },
+                    "type": "array"
+                },
                 "tags": {
                     "items": {
                         "$ref": "#/definitions/Tag"
@@ -1528,6 +1534,29 @@
                     ]
                 }
             ]
+        },
+        "Script<GlAction>": {
+            "properties": {
+                "actions": {
+                    "$ref": "#/definitions/ActionList<GlAction>"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "scripts": {
+                    "items": {
+                        "$ref": "#/definitions/Script<GlAction>"
+                    },
+                    "type": "array"
+                },
+                "tags": {
+                    "items": {
+                        "$ref": "#/definitions/Tag"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
         },
         "ScriptAction": {
             "properties": {
