@@ -669,11 +669,7 @@
                     "type": "object"
                 },
                 "lock": {
-                    "type": [
-                        "string",
-                        "number",
-                        "boolean"
-                    ]
+                    "type": "string"
                 },
                 "log": {
                     "anyOf": [
@@ -990,11 +986,7 @@
                     "type": "object"
                 },
                 "unlock": {
-                    "type": [
-                        "string",
-                        "number",
-                        "boolean"
-                    ]
+                    "type": "string"
                 },
                 "updateAttributeBuffer": {
                     "properties": {
@@ -1350,11 +1342,7 @@
                     "$ref": "#/definitions/NumberResolution<number>"
                 },
                 "lock": {
-                    "type": [
-                        "string",
-                        "number",
-                        "boolean"
-                    ]
+                    "type": "string"
                 },
                 "pause": {
                     "type": [
@@ -1364,11 +1352,7 @@
                     ]
                 },
                 "unlock": {
-                    "type": [
-                        "string",
-                        "number",
-                        "boolean"
-                    ]
+                    "type": "string"
                 }
             },
             "type": "object"
